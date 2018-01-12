@@ -14,3 +14,28 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index',[
+	'as' => 'home',
+	'uses' => 'PageController@getIndex'
+]);
+
+Route::get('product/{id}', [
+	'as' => 'product',
+	'uses' => 'PageController@getProduct'
+]);
+
+Route::get('category/{type}', [
+	'as' => 'category',
+	'uses' => 'PageController@getCategory'
+]);
+
+Route::get('contact', [
+	'as' => 'contact',
+	'uses' => 'PageController@getContact'
+]);
+
+Route::get('table', [
+	'as' => 'table',
+	'uses' => 'PageController@getTable'
+]);
